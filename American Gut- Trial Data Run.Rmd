@@ -18,10 +18,17 @@ devtools::install_github("biomformat", "joey711")
 ```
 
 ```{r}
+library(readxl)
+American_Gut_Meta_Data_New <- read_excel("~/Desktop/American Gut Meta_Data_New.xlsx")
+View(American_Gut_Meta_Data_New)
+```
+
+```{r}
 #Data downloaded from ftp://ftp.microbio.me/AmericanGut/latest/04-meta/ag-gg-100nt.biom
 file_path <- "~/Desktop/Big Data/Big-Data-Project/ag-gg-100nt.biom"
 dat <- read_biom(file_path)
 ```
+
 ```{r}
 #You can't go straight from a "sparse Matrix" to a data frame! 
 otu_table <- as.data.frame(as.matrix(biom_data(dat)))
@@ -33,6 +40,7 @@ taxonomy <- observation_metadata(dat)
 ```
 
 ```{r}
+######fix
 metadata <- sample_metadata(dat)
 ```
 
@@ -43,24 +51,11 @@ head(otu_table[,1:10])
 
 
 ```{r}
-head(metadata[,1:4])
+head(American_Gut_Meta_Data_New[,1:4])
 ```
 
 
 ```{r}
 head(taxonomy)
-```
-
-
-## R Markdown
-
-> library("biom", lib.loc="/Library/Frameworks/R.framework/Versions/3.3/Resources/library")
-> library("devtools", lib.loc="/Library/Frameworks/R.framework/Versions/3.3/Resources/library")
-> library("knitr", lib.loc="/Library/Frameworks/R.framework/Versions/3.3/Resources/library")
-devtools::install_github("biomformat", "joey711")
-
-
-```{r}
-library(biomformat)
 ```
 
