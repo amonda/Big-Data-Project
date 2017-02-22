@@ -1,0 +1,66 @@
+---
+title: "Untitled"
+author: "Alyssa Monda"
+date: "2/22/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(biom)
+library(devtools)
+library(knitr)
+library(biomformat)
+```
+
+```{r}
+devtools::install_github("biomformat", "joey711")
+```
+
+```{r}
+#Data downloaded from ftp://ftp.microbio.me/AmericanGut/latest/04-meta/ag-gg-100nt.biom
+file_path <- "~/Desktop/Big Data/Big-Data-Project/ag-gg-100nt.biom"
+dat <- read_biom(file_path)
+```
+```{r}
+#You can't go straight from a "sparse Matrix" to a data frame! 
+otu_table <- as.data.frame(as.matrix(biom_data(dat)))
+```
+
+```{r}
+####import metadata how?
+taxonomy <- observation_metadata(dat)
+```
+
+```{r}
+metadata <- sample_metadata(dat)
+```
+
+
+```{r}
+head(otu_table[,1:10])
+```
+
+
+```{r}
+head(metadata[,1:4])
+```
+
+
+```{r}
+head(taxonomy)
+```
+
+
+## R Markdown
+
+> library("biom", lib.loc="/Library/Frameworks/R.framework/Versions/3.3/Resources/library")
+> library("devtools", lib.loc="/Library/Frameworks/R.framework/Versions/3.3/Resources/library")
+> library("knitr", lib.loc="/Library/Frameworks/R.framework/Versions/3.3/Resources/library")
+devtools::install_github("biomformat", "joey711")
+
+
+```{r}
+library(biomformat)
+```
+
