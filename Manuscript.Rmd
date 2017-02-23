@@ -1,0 +1,24 @@
+---
+title: "Manuscript"
+author: "Alyssa Monda"
+date: "2/22/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Abstract
+
+## Background
+
+## Methods
+
+## Results
+
+## Discussion
+
+## Conclusion
+
+## References 

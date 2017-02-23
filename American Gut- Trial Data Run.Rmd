@@ -11,6 +11,9 @@ library(biom)
 library(devtools)
 library(knitr)
 library(biomformat)
+library(mixOmics)
+library(tidyverse)
+library(vegan)
 ```
 
 ```{r}
@@ -57,5 +60,8 @@ head(American_Gut_Meta_Data_New[,1:4])
 
 ```{r}
 head(taxonomy)
+```
+```{r}
+
 ```
 

@@ -1,0 +1,20 @@
+---
+title: "Milestone 2"
+author: "Alyssa Monda"
+date: "2/22/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Question: What is the relationship between physical activity and the alpha/beta diversity of the gut microbiome?
+
+Aim 1:Characterize the alpha/beta diversity of the gut microbiome of people who are sedentary.
+
+Aim 2: Characterize the alpha/beta diversity of the gut microbiome of people who engage in regular physical activty.
+
+Aim 3: Assess the relationship between physcial activity and the butyrate producing bacteria ( )
+
+## Table 1: Demographics
